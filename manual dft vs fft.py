@@ -40,7 +40,7 @@ def fft(x):
     #Butterfly operation
     return [even[k] + T[k] for k in range(N//2)] + [even[k] - T[k] for k in range(N//2)]
 
-def timer(N,k):
+def timer(N):
     #Plots time taken for FFT vs DFT
     loop=50
     start_dft = time.time()
@@ -69,6 +69,6 @@ for k in range(13):
     x_pre= np.linspace(0, L, N+1)
     x=x_pre[0:N]    
     a=f(x)
-    timer(N,k)
+    timer(N)
 
 
